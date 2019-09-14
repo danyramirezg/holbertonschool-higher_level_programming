@@ -3,9 +3,15 @@
 #include <stdio.h>
 #include "lists.h"
 
+/**
+ * free_dlistint - Function that free a double linked list.
+ * @head: Pointer that point to the list
+ *
+ * Return: void
+ */
 void free_dlistint(dlistint_t *head)
 {
-g	dlistint_t *p;
+	dlistint_t *p;
 
 	if (head == NULL)
 		return;

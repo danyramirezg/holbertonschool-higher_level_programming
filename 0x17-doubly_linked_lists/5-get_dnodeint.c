@@ -4,7 +4,7 @@
 #include "lists.h"
 
 /**
- * get_dnodeint_at_index - Function that returns the nth node of a dlistint_t linked list.
+ * get_dnodeint_at_index - Returns the node of a dlistint_t linked list.
  * @head: Pointer that point to the list
  * @index: is the index of the node, starting from 0
  * Return: The node of a double linked list
