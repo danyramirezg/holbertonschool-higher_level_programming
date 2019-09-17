@@ -2,6 +2,6 @@
 def no_c(my_string):
     noc = []
     for i in my_string:
-        if i != 'c' and i != 'C':
+        if i != 'C' and i != 'c':
             noc.append(i)
-        return "".join(noc)
+    return "".join(noc)
