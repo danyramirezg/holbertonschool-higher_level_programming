@@ -10,4 +10,4 @@ def print_matrix_integer(matrix=[[]]):
                 print()
             else:
                 print("{}".format(x), end="")
-                result += 1
+            result += 1
