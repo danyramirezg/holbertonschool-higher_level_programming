@@ -11,7 +11,8 @@ def roman_to_int(roman_string):
         if i in dicc_rom:
             value = dicc_rom[i]
         else:
-            raise ValueError("roman_string contains illegal character: " + parameter)
+            raise ValueError(
+                "roman_string contains illegal character: " + parameter)
 
         if rom is 0:
             rom += value
