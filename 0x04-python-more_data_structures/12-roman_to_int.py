@@ -3,7 +3,7 @@ def roman_to_int(roman_string):
     if type(roman_string) is not str or roman_string is None:
         return 0
     dicc_rom = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500,
-                 'M': 1000}
+                'M': 1000}
     num = 0
     cont = 0
     for i in roman_string:
