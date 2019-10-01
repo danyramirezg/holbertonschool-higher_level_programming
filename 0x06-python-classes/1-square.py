@@ -6,7 +6,6 @@
 class Square:
     """Creates a Square class"""
 
-
-def __init__(self, size):
-    """Initializes Square"""
-    self._size = size
+    def __init__(self, size):
+        """Initializes Square"""
+        self._size = size
