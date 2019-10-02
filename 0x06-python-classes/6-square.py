@@ -7,7 +7,7 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """Initializes Square"""
-        self.__size = size
+        self.size = size
         try:
             self.position = position
         except TypeError as err:
@@ -61,4 +61,4 @@ class Square:
                     print('' * self.position[0], end="")
                     print("#" * self.size)
         if self.__size == 0:
-            print()
+            print("")
