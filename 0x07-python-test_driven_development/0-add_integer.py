@@ -3,7 +3,8 @@
 """Function that adds 2 integers"""
 
 
-def add_integer(a, b=89):
+def add_integer(a, b=98):
+
     if type(a) is int or type(a) is float:
         a = int(a)
     else:

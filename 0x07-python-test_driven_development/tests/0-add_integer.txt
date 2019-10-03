@@ -1,4 +1,4 @@
-0. Integers addition
+0. Integers addition module
 ======================
 
 Using ``function that adds 2 integers.``
@@ -10,18 +10,61 @@ a and b must be integers or floats, otherwise raise a TypeError exception with t
 
 Now use it:
 
-    >>> add_integer(5, 3)
-    8
+Should return the sum of two integers:
+    >>> add_integer(7, 5)
+    12
+
+Should return an integer from the sum of a = float, b = integer:
     >>> add_integer(5.0, 3)
     8
+
+Should return an integer from the sum of a = integer, b = float:
+    >>> add_integer(5, 3.0)
+    8
+
+Should return an error:
     >>> add_integer(None, 3)
-    a must be an integer
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Should return an error:
     >>> add_integer(3, None)
-    b must be an integer
-    >>> add_integer(None, None)
-    a must be an integer
-    >>> add_integer(, 5)
-    a must be an integer
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Should return an error:
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Should return the sum of two negative integers:
+    >>> add_integer(-7, -2)
+    -9
+
+Should return error:
+    >>> add_integer(h, -2)
+    Traceback (most recent call last):
+    ...
+   NameError: name 'hola' is not defined
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
