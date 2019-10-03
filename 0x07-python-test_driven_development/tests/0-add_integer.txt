@@ -44,11 +44,38 @@ Should return the sum of two negative integers:
     >>> add_integer(-7, -2)
     -9
 
-Should return error:
-    >>> add_integer(h, -2)
+Should return error if a = string:
+    >>> add_integer("hello", -2)
     Traceback (most recent call last):
     ...
-   NameError: name 'hola' is not defined
+    TypeError: a must be an integer
+
+Should return error if b = string:
+    >>> add_integer(2, "h")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Should return error if a = None:
+    >>> add_integer(None, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Should return error if b = None:
+    >>> add_integer(2, None)
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Should return error if a = None and b = None:
+    >>> add_integer(None, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+
+
 
 
 

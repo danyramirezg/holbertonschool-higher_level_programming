@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 add_integer = __import__('0-add_integer').add_integer
 
-print(add_integer(h, 2))
+print(add_integer(None, None))
 print(add_integer(-7, -2))
 print(add_integer(2))
 print(add_integer(100.3, -2))
