@@ -1,0 +1,28 @@
+0. Integers addition
+======================
+
+Using ``function that adds 2 integers.``
+-------------------
+
+a and b must be integers or floats, otherwise raise a TypeError exception with the message a must be an integer or b must be an integer:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+    >>> add_integer(5, 3)
+    8
+    >>> add_integer(5.0, 3)
+    8
+    >>> add_integer(None, 3)
+    a must be an integer
+    >>> add_integer(3, None)
+    b must be an integer
+    >>> add_integer(None, None)
+    a must be an integer
+    >>> add_integer(, 5)
+    a must be an integer
+
+
+
+
