@@ -70,7 +70,7 @@ Should return error if b = None:
     TypeError: b must be an integer
 
 Should return an error if a = None and b = None:
-    >>> add_integer(None, 2)
+    >>> add_integer(None, None)
     Traceback (most recent call last):
     ...
     TypeError: a must be an integer
@@ -92,6 +92,11 @@ Should return an error if a list is passed:
     Traceback (most recent call last):
     ...
     TypeError: b must be an integer
+
+Should return an integer:
+    >>> add_integer(3)
+    101
+
 
 
 
