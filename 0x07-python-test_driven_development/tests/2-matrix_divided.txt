@@ -1,0 +1,14 @@
+Divide a matrix
+======================
+
+Using ``Function that divides all elements of a matrix.``
+-------------------
+
+
+Import module:
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Uses:
+
+Should:
+    >>> matrix_divided(matrix, 3)

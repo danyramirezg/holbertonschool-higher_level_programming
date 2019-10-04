@@ -1,0 +1,38 @@
+Say my name
+======================
+
+Using `` function that prints My name is <first name> <last name>``
+-------------------
+
+first_name and last_name must be strings otherwise, raise a TypeError exception with the message first_name must be a string or last_name must be a string
+
+Import module:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Uses:
+
+Returns an error when the first argument is an integer:
+    >>> say_my_name(2)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Returns an error when the second argument is an integer:
+    >>> say_my_name("Dany", 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+Returns an error when the first and second arguments are integers:
+    >>> say_my_name(2, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Returns an error when there are not arguments
+    >>> say_my_name()
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+
