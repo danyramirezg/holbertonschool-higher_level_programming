@@ -100,6 +100,10 @@ Should return an integer:
     >>> add_integer(3)
     101
 
+Should return an int:
+     >>> type(add_integer(7, 3))
+     <class 'int'>
+
 
 
 

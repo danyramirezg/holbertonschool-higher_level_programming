@@ -1,9 +1,12 @@
 Divide a matrix
 ======================
+Function
+========.
+Function that divides all elements of a matrix.
 
-Using ``Function that divides all elements of a matrix.``
--------------------
-
+Operations
+==========
+All elements of the matrix should be divided by div, rounded to 2 decimal places
 
 Import module:
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
