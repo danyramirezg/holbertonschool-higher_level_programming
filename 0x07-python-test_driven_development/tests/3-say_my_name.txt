@@ -11,6 +11,10 @@ Import module:
 
 Uses:
 
+Returns the single argument:
+    >>> say_my_name("Dany")
+    My name is Dany
+
 Returns an error when the first argument is an integer:
     >>> say_my_name(2)
     Traceback (most recent call last):
