@@ -6,12 +6,29 @@ Function that divides all elements of a matrix.
 
 Operations
 ==========
-All elements of the matrix should be divided by div, rounded to 2 decimal places
+All elements of the matrix should be divided by
+div, rounded to 2 decimal places
 
 Import module:
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 Uses:
 
-Should:
-    >>> matrix_divided(matrix, 3)
+Test 1: Divide matrix for a float number:
+    >>> matrix_divided([[1, 2], [3, 4]], 3.6)
+    [[0.28, 0.56], [0.83, 1.11]]
+
+Test 2: Divide a matrix for an integer
+    >>> matrix_divided([[1, 2], [3, 4]], 6)
+    [[0.17, 0.33], [0.5, 0.67]]
+
+Test 3: Divide by 0
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+
+
+
+
+
