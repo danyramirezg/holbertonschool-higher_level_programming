@@ -12,10 +12,12 @@ class Rectangle:
         self.height = height
         self.width = width
 
+    """Private instance attribute: width"""
     @property
     def width(self):
         return self.__width
 
+    """Private instance attribute: height"""
     @width.setter
     def width(self, value):
 
