@@ -32,12 +32,6 @@ class Rectangle:
 
         return "Rectangle({}, {})".format(self.width, self.height)
 
-    """Print the message 'Bye rectangle...'
-    when an instance of Rectangle is deleted"""
-
-    def __del__(self):
-        print("Bye rectangle...")
-
     @property
     def width(self):
         return self.__width
@@ -82,3 +76,9 @@ class Rectangle:
         else:
             perimeter = (self.__width * 2) + (self.__height * 2)
             return perimeter
+
+    """Print the message 'Bye rectangle...'
+        when an instance of Rectangle is deleted"""
+
+    def __del__(self):
+        print("Bye rectangle...")
