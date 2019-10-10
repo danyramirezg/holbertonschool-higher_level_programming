@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-    def magic_string(num=[0])
-        num[0] += 1
-        return ", ".join(["Holberton"] * num[0])
+def magic_string(str=[]):
+    str.append("Holberton")
+    return ", ".join(str)
