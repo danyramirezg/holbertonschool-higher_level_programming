@@ -16,7 +16,7 @@ Uses:
 
 Should return an error when cannot convert float NaN to integer:
 
-    >>> add_integer(float(NaN))
+    >>> add_integer(float("NaN"), 0)
     Traceback (most recent call last):
     ...
     ValueError: cannot convert float NaN to integer
