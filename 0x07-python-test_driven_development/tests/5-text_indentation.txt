@@ -30,3 +30,10 @@ Test 3: Returns an error when there is not input
     Traceback (most recent call last):
     ...
     TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Test 4: Returns string with blank line:
+    >>> text_indentation("Hola. Dany!")
+    Hola.
+    <BLANKLINE>
+    Dany!
+
