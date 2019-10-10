@@ -1,4 +1,4 @@
-4. Text indentation
+5. Text indentation
 ===========================
 Function
 ========.
@@ -15,7 +15,18 @@ Import module:
 
 Uses:
 
+Test 1: Returns an string
+    >>> text_indentation("hola")
+    hola
 
-    >>> text_indentation("   hola")
-       hola
+Test 2: Returns an error when the input isn't a string
+    >>> text_indentation(2422)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
 
+Test 3: Returns an error when there is not input
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
