@@ -30,3 +30,10 @@ Test 4:
     Traceback (most recent call last):
     ...
     ValueError: size must be >= 0
+
+Test 5: missing one argument
+    >>> print_square()
+    Traceback (most recent call last):
+    ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
