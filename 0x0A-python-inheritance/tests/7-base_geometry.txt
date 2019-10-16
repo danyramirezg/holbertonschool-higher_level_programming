@@ -1,0 +1,76 @@
+Test for BaseGeometry
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Test 1: Initialize Class
+       >>> bg = BaseGeometry()
+       >>> bg.integer_validator("check", 888)
+
+Test 2 : Value = 0
+       >>> bg.integer_validator("six", 0)
+       Traceback (most recent call last):
+       ...
+       ValueError: six must be greater than 0
+
+Test 3: Use strings
+       >>> bg.integer_validator("name", "Dany")
+       Traceback (most recent call last):
+       ...
+       TypeError: name must be an integer
+
+Test 4: Input is a negative number
+       >>> bg.integer_validator("distance", -8)
+       Traceback (most recent call last):
+       ...
+       ValueError: distance must be greater than 0
+
+Test 5: Receive one argument
+       >>> bg.integer_validator("value")
+       Traceback (most recent call last):
+       ...
+       TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Test 6: Receive zero arguments
+
+       >>> bg.integer_validator()
+       Traceback (most recent call last):
+       ...
+       TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Test 7: Receive a None as an argument
+       >>> bg.integer_validator("value", None)
+       Traceback (most recent call last):
+       ...
+       TypeError: value must be an integer
+
+Test 8: Area test
+       >>> bg.area()
+       Traceback (most recent call last):
+       ...
+       Exception: area() is not implemented
+
+Test 9: The second argument is a Boolean
+       >>> bg.integer_validator("name", False)
+       Traceback (most recent call last):
+       ...
+       TypeError: name must be an integer
+
+Test 10: The second argument is a dict
+       >>> bg.integer_validator("check", {6, 8})
+       Traceback (most recent call last):
+       ...
+       TypeError: check must be an integer
+
+Test 11: The second argument is a tuple
+       >>> bg.integer_validator("check", (1,))
+       Traceback (most recent call last):
+       ...
+       TypeError: check must be an integer
+
+Test 12: The second argument is a list
+       >>> bg.integer_validator("check", [5, 6])
+       Traceback (most recent call last):
+       ...
+       TypeError: check must be an integer
+
+
