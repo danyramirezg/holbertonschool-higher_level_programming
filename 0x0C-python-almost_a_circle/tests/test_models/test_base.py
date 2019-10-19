@@ -9,3 +9,6 @@ from models.rectangle import Rectangle
 """
 Unittest cases for Base class
 """
+class BaseTest(unittest.TestCase):
+
+    def test_classBase(self):
