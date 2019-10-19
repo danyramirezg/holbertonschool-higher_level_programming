@@ -83,6 +83,7 @@ class Rectangle(Base):
     """Prints in stdout the Rectangle instance with the character #"""
 
     def display(self):
+        print("\n".format(self.y))
         for row in range(self.__height):
             print("#" * self.__width)
 
@@ -90,3 +91,4 @@ class Rectangle(Base):
 
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+
