@@ -16,6 +16,7 @@ class Rectangle(Base):
         self.y = y
 
     """Set the property of width"""
+
     @property
     def width(self):
         return self.__width
@@ -30,6 +31,7 @@ class Rectangle(Base):
             self.__width = value
 
     """Set the property of height"""
+
     @property
     def height(self):
         return self.__height
@@ -44,6 +46,7 @@ class Rectangle(Base):
             self.__height = value
 
     """Set the property of x"""
+
     @property
     def x(self):
         return self.__x
@@ -58,6 +61,7 @@ class Rectangle(Base):
             self.__x = value
 
     """Set the property of y"""
+
     @property
     def y(self):
         return self.__y
@@ -70,3 +74,6 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
             self.__y = value
+
+    def area(self):
+        return self.__height * self.__width
