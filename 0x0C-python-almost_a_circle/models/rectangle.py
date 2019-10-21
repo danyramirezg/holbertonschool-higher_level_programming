@@ -78,18 +78,32 @@ class Rectangle(Base):
     """Returns the area value of the Rectangle instance."""
 
     def area(self):
-        return self.__height * self.__width
+        return self.height * self.width
 
     """Prints in stdout the Rectangle instance with the character #"""
 
     def display(self):
         print("\n" * self.y, end="")
-        for col in range(self.__height):
+        for col in range(self.height):
             print(" " * self.x, end="")
-            print("#" * self.__width)
+            print("#" * self.width)
 
     """Method that returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
 
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
                                                        self.width, self.height)
+
+    def update(self, *args):
+
+        if args:
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) >= 2:
+                self.width = args[1]
+            if len(args) >= 3:
+                self.height = args[2]
+            if len(args) >= 4:
+                self.x = args[3]
+            if len(args) >= 5:
+                self.y = args[4]
