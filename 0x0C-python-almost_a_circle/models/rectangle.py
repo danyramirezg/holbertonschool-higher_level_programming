@@ -3,13 +3,11 @@
 
 """"Module rectangle"""
 
-
 from models.base import Base
-
-"""Class Rectangle that inherits from Base"""
 
 
 class Rectangle(Base):
+    """Class Rectangle that inherits from Base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Create constructor init"""
@@ -26,7 +24,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        """Set the widht"""
+        """Set the width"""
         if not type(value) == int:
             raise TypeError("width must be an integer")
         elif value <= 0:
