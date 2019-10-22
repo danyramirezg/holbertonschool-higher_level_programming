@@ -47,7 +47,7 @@ class Base:
         """static method that returns the list of the JSON string
         representation"""
         if json_string is None:
-            return "[]"
+            return []
         return json.loads(json_string)
 
     @classmethod
