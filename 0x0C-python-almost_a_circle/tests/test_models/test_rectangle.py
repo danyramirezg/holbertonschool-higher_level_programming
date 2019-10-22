@@ -2,8 +2,10 @@
 import unittest
 import json
 import pep8
+import os
 from models.base import Base
 from models.rectangle import Rectangle
+from models.square import Square
 
 """
 Unittest cases for Rectangle class
@@ -11,9 +13,10 @@ Unittest cases for Rectangle class
 
 
 class RectangleTest(unittest.TestCase):
+    """Class rectangle test"""
 
     def test_id(self):
-        # Test to check the id
+        """Test to check the id"""
 
         Base._Base__nb_objects = 0
 
