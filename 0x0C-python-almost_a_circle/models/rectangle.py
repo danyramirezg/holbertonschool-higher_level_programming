@@ -8,21 +8,21 @@ from models.base import Base
 class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
-
+        """Create constructor init"""
         super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
 
-    """Set the property of width"""
-
     @property
     def width(self):
+        """Set the property of width"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """Set the widht"""
         if not type(value) == int:
             raise TypeError("width must be an integer")
         elif value <= 0:
@@ -30,14 +30,14 @@ class Rectangle(Base):
         else:
             self.__width = value
 
-    """Set the property of height"""
-
     @property
     def height(self):
+        """Set the getter of height"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """Set the height"""
         if not type(value) == int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -45,10 +45,9 @@ class Rectangle(Base):
         else:
             self.__height = value
 
-    """Set the property of x"""
-
     @property
     def x(self):
+        """Set the property of x"""
         return self.__x
 
     @x.setter
@@ -60,10 +59,9 @@ class Rectangle(Base):
         else:
             self.__x = value
 
-    """Set the property of y"""
-
     @property
     def y(self):
+        """Set the property of y"""
         return self.__y
 
     @y.setter
@@ -75,26 +73,24 @@ class Rectangle(Base):
         else:
             self.__y = value
 
-    """Returns the area value of the Rectangle instance."""
-
     def area(self):
+        """Returns the area value of the Rectangle instance."""
         return self.height * self.width
 
-    """Prints in stdout the Rectangle instance with the character #"""
-
     def display(self):
+        """Prints in stdout the Rectangle instance with the character #"""
         print("\n" * self.y, end="")
         for col in range(self.height):
             print(" " * self.x, end="")
             print("#" * self.width)
 
-    """Method that returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
-
     def __str__(self):
+        """Method that returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
                                                        self.width, self.height)
 
     def update(self, *args, **kwargs):
+        """Method to update"""
 
         if args:
             if len(args) >= 1:
@@ -109,5 +105,11 @@ class Rectangle(Base):
                 self.y = args[4]
         else:
             for key, value in kwargs.items():
-                #if hassattr(self, key) is True:
+                if hasattr(self, key) is True:
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Method dictionary"""
+        dicti = {'id': self.id, 'width': self.width, 'height': self.height,
+                 'x': self.x, 'y': self.y}
+        return dicti
