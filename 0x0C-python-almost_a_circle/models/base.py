@@ -2,6 +2,7 @@
 """Module Base"""
 
 import json
+import os
 
 
 class Base:
@@ -45,10 +46,9 @@ class Base:
     def from_json_string(json_string):
         """static method that returns the list of the JSON string
         representation"""
-        if json_string is None or len(json_string) == 0:
+        if json_string is None:
             return "[]"
-        else:
-            return json.dumps(json_string)
+        return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
@@ -63,3 +63,19 @@ class Base:
             dummy = cls(8, 4)
             dummy.update(**dictionary)
             return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """"Returns a a list of instances"""
+
+        newfile = "{}.json".format(cls.__name__)
+        lista = []
+
+        if os.path.isfile(newfile):
+            with open(newfile, encoding="utf-8") as new:
+                items = cls.from_json_string(new.read())
+            for i in items:
+                lista.append(cls.create(**i))
+            return lista
+        else:
+            return []
