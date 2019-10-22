@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Module Base"""
 
 import json
 
@@ -8,6 +9,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """Constructor init"""
 
         if id is not None:
             self.id = id
@@ -24,12 +26,20 @@ class Base:
         else:
             return json.dumps(list_dictionaries)
 
-    # @classmethod
-    # def save_to_file(cls, list_objs):
-    #     list_objs is None
-    #
-    #     l = list_objs
-    #     f.write(json.dumps(l, sort_keys=True, indent=4))
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """Method that writes the JSON string representation of
+        list_objs to a file"""
+
+        newfile = "{}.json".format(cls.__name__)
+        dicct = []
+
+        if list_objs is not None:
+            for i in list_objs:
+                dicct.append(cls.to_dictionary(i))
+
+        with open(newfile, "w", encoding="UTF8") as lista:
+            lista.write(cls.to_json_string(dicct))
 
     @staticmethod
     def from_json_string(json_string):
@@ -40,7 +50,16 @@ class Base:
         else:
             return json.dumps(json_string)
 
-    # @classmethod
-    # def create(cls, **dictionary):
-    # """Returns an instance with all attributes already set"""
+    @classmethod
+    def create(cls, **dictionary):
+        """Returns an instance with all attributes already set"""
 
+        if cls.__name__ == "Square":
+            dummy = cls(5)
+            dummy.update(**dictionary)
+            return dummy
+
+        if cls.__name__ == "Rectangle":
+            dummy = cls(8, 4)
+            dummy.update(**dictionary)
+            return dummy

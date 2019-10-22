@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+"""Module Square"""
+
 from models.rectangle import Rectangle
 
 
@@ -18,6 +20,7 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         """The setter function for the size"""
+
         if type(value) is not int:
             raise TypeError("width must be an integer")
         elif value <= 0:
@@ -52,9 +55,3 @@ class Square(Rectangle):
         """Returns the dictionary representation of a Square"""
         dic2 = {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
         return dic2
-
-
-
-
-
-

@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+
+""""Module rectangle"""
+
+
 from models.base import Base
 
 """Class Rectangle that inherits from Base"""
@@ -52,6 +56,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        """Set the x"""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -66,6 +71,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        """Set the y"""
         if not type(value) == int:
             raise TypeError("y must be an integer")
         elif value < 0:
