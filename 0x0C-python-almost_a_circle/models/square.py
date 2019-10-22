@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
 """Module Square"""
+
 
 from models.rectangle import Rectangle
 
@@ -11,6 +11,7 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """Call the super class"""
         super().__init__(size, size, x, y, id)
+        self.size = size
 
     @property
     def size(self):
@@ -25,9 +26,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """The overloading __str__ method """
-
-        return "[Square] ({}) {}/{} - {}" \
-            .format(self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
+                                                 self.y, self.width)
 
     def update(self, *args, **kwargs):
         """Update the class Square by adding the
