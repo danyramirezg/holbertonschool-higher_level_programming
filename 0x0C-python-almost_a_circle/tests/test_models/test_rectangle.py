@@ -232,6 +232,5 @@ class TestRectangle_width(unittest.TestCase):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             Rectangle(frozenset({1, 2, 3, 1}), 2)
 
-
-if __name__ == "__main__":
-    unittest.main()
+# if __name__ == "__main__":
+#   unittest.main()
