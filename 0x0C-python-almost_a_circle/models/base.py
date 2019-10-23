@@ -3,6 +3,7 @@
 
 import json
 import os
+import turtle
 
 
 class Base:
@@ -79,3 +80,28 @@ class Base:
             return lista
         else:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        def tortuguita(x, y, width, height, obj):
+            obj.penup()
+            obj.forward(x)
+            obj.right(90)
+            obj.forward(y)
+            obj.pendown()
+            obj.left(90)
+            obj.forward(width)
+            obj.right(90)
+            obj.forward(height)
+            obj.right(90)
+            obj.forward(width)
+            obj.right(90)
+            obj.forward(height)
+            obj.penup()
+            obj.home()
+
+        tu = turtle.Turtle()
+        for rect in list_rectangles:
+            tortuguita(rect.x, rect.y, rect.width, rect.height, tu)
+        for cua in list_squares:
+            tortuguita(cua.x, cua.y, cua.size, cua.size, tu)
