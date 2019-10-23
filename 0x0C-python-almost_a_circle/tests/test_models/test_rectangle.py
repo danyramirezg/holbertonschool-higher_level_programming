@@ -127,6 +127,26 @@ class RectangleTest(unittest.TestCase):
         self.assertTrue(hasattr(Rectangle, "to_dictionary"))
         self.assertTrue(Rectangle.to_dictionary.__doc__)
 
+    def test_update_kwargs(self):
+        """Test update kwargs
+        """
+        r = Rectangle(16, 9, 6, 3, 33)
+        r.update(id=6, x=5, height=5)
+        self.assertEqual(6, r.id)
+        self.assertEqual(5, r.x)
+        self.assertEqual(5, r.height)
+
+    def test_dict(self):
+        """Test dictionary
+        """
+        r = Rectangle(16, 9, 6, 3, 33)
+        dic = r.to_dictionary()
+        self.assertEqual(dic['width'], 16)
+        self.assertEqual(dic['height'], 9)
+        self.assertEqual(dic['x'], 6)
+        self.assertEqual(dic['y'], 3)
+        self.assertEqual(dic['id'], 33)
+
 #     def test_width_private(self):
 #         with self.assertRaises(AttributeError):
 #             print(Rectangle(5, 5, 0, 0, 1).__width)
