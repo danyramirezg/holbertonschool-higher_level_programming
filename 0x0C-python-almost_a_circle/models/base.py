@@ -83,6 +83,7 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
+        """Opens a window and draws all the Rectangles and Squares"""
         def tortuguita(x, y, width, height, obj):
             obj.penup()
             obj.forward(x)
