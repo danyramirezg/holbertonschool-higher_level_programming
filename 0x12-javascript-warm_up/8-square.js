@@ -1,7 +1,7 @@
 #!/usr/bin/node
 /* Script that prints a square */
 
-const square = 'x';
+const square = 'X';
 const argum = process.argv[2];
 let i;
 
