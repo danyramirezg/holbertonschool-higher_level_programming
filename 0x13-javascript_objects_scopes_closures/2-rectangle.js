@@ -4,12 +4,12 @@
 class Rectangle {
   constructor (w, h) {
     if (w <= 0 || h <= 0) {
-       var empty_ob = {};
-       return empty_ob
+      var EmptyOb = {};
+      return EmptyOb;
     } else {
-    this.width = w;
-    this.height = h;
-   }
+      this.width = w;
+      this.height = h;
+    }
   }
 }
 module.exports = Rectangle;
