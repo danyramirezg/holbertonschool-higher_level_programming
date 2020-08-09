@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-# Lists all states with a name starting with N (upper N) from the database
+"""Take 4 arguments: mysql username, mysql password, database name and state
+ name searched (no argument validation needed"""
 
 import MySQLdb
 from sys import argv
@@ -15,6 +16,6 @@ if __name__ == "__main__":
                    "ORDER BY states.id ASC".format(state))
     for rows in cursor.fetchall():
         print(rows)
-    #
-    # cursor.close()
-    # db.close()
+
+    cursor.close()
+    db.close()
